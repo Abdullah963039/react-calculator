@@ -13,10 +13,3 @@ function App() {
 }
 
 export default App;
-
-/**
- *
- * todo:  handle adding 0
- *
- * - focus styles for light & dark  > Buttons
- */

@@ -13,7 +13,7 @@ export const ACTIONS = {
   CLEAR: "clear",
 };
 
-const STATE = {
+const INITIAL_STATE = {
   currentOperand: "",
   previousOperand: "",
   operation: "",
@@ -84,7 +84,7 @@ function reducer(state, { type, payload }) {
       };
 
     case ACTIONS.CLEAR:
-      return STATE;
+      return INITIAL_STATE;
 
     default:
       return state;
@@ -92,7 +92,7 @@ function reducer(state, { type, payload }) {
 }
 
 export default function Calculator() {
-  const [state, dispatch] = React.useReducer(reducer, STATE);
+  const [state, dispatch] = React.useReducer(reducer, INITIAL_STATE);
 
   const handlePressEnter = (e) => {
     if (e.key === "Backspace") {

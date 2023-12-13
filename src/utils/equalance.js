@@ -8,20 +8,20 @@ export function equalance(state) {
 
   if (previousOperand === "" || currentOperand === "") return "";
 
-  let [p, c] = [parseFloat(previousOperand), parseFloat(currentOperand)];
+  let [prev, curr] = [parseFloat(previousOperand), parseFloat(currentOperand)];
 
   switch (operation) {
     case "+":
-      return p + c;
+      return prev + curr;
 
     case "-":
-      return p - c;
+      return prev - curr;
 
     case "*":
-      return p * c;
+      return prev * curr;
 
     case "÷":
-      return p / c;
+      return prev / curr;
 
     default:
       return state;
